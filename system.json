@@ -1,41 +1,116 @@
 {
-  "id": "worldbuilding",
-  "version": "0.8.2",
-  "title": "Simple World-Building",
-  "url": "https://github.com/foundryvtt/worldbuilding/",
-  "description": "A minimalist game system which provides configurable Actor and Item templates to support free-form system agnostic game-play.",
-  "license": "LICENSE.txt",
+  "id": "reanima",
+  "title": "Re:Anima - Beyond Crunch",
+  "description": "Una version alternativa del sistema Anima Beyond Fantasy con el objetivo de implementar multiples comodidades adicionales",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "url": "https://github.com/gitkinu/reanima",
+  "manifest": "https://raw.githubusercontent.com/gitkinu/reanima/master/system.json",
+  "download": "https://github.com/gitkinu/reanima/archive/refs/tags/release.zip",
   "authors": [
     {
-      "name": "Atropos",
-      "url": "https://foundryvtt.com"
+      "name": "Kinu",
+      "url": ""
     }
   ],
-  "esmodules": ["module/simple.js"],
-  "styles": ["styles/simple.css"],
-  "packs": [],
+  "esmodules": ["module/reanima.js"],
+  "styles": ["styles/reanima.css"],
   "languages": [
     {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
-      "lang": "pl",
-      "name": "Polski",
-      "path": "lang/pl.json"
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
     }
   ],
-  "compatibility": {
-    "minimum": "10",
-    "verified": "11"
+  "documentTypes": {
+  "Actor": {
+    "character": {
+      "htmlFields": ["details.biography.public", "details.biography.private", "details.biography.appearance"]
+    }
   },
+  "Item": {
+    "weapon": {
+      "htmlFields": ["description.public", "description.secret"]
+    },
+    "armor": {
+      "htmlFields": ["description.public", "description.secret"]
+    },
+    "consumable": {
+      "htmlFields": ["description.public", "description.secret"]
+    },
+    "tool": {
+      "htmlFields": ["description.public", "description.secret"]
+    },
+    "advantages": {
+      "htmlFields": ["description"]
+    },
+    "disadvantages": {
+      "htmlFields": ["description.public"]
+    },
+    "spells": {
+      "htmlFields": ["description"]
+    },
+    "psychics": {
+      "htmlFields": ["description"]
+    },
+    "ki": {
+
+    },
+    "nemesis": {
+
+    },
+    "styletables": {
+
+    }
+  },
+  "JournalEntryPage": {
+    "category": {
+      "htmlFields": []
+    }
+  }
+  },
+  "packs": [
+    {
+      "name": "advantages",
+      "label": "Advantages",
+      "path": "packs/advantages",
+      "type": "Item"
+    },
+    {
+      "name": "disadvantages",
+      "label": "Disadvantages",
+      "path": "packs/disadvantages",
+      "type": "Item"
+    },
+    {
+      "name": "equipment",
+      "label": "Equipment",
+      "path": "packs/equipment",
+      "type": "Item"
+    },
+    {
+      "name": "spell",
+      "label": "Spells",
+      "path": "packs/spell",
+      "type": "Item"
+    },
+    {
+      "name": "psychic",
+      "label": "Psychics",
+      "path": "packs/psychic",
+      "type": "Item"
+    }
+  ],
   "grid": {
-    "distance": 5,
-    "units": "ft"
+    "type": 1,
+    "distance": 1,
+    "units": "m",
+    "diagonals": 1
   },
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
-  "manifest": "https://raw.githubusercontent.com/foundryvtt/worldbuilding/master/system.json",
-  "download": "https://github.com/foundryvtt/worldbuilding/archive/refs/tags/release-082.zip"
+  "background": "systems/reanima/ui/background.webp",
+  "socket": true,
+  "primaryTokenAttribute": "characteristics.lifePoints"
 }
