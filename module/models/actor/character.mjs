@@ -2,12 +2,13 @@ const {
   HTMLField, SchemaField, NumberField, StringField, FilePathField, ArrayField
 } = foundry.data.fields;
 
-export default class Character extends foundry.abstract.TypeDataModel {
+export default class character extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       name: new HTMLField(),
-      attributes: new SchemaField({
-        base: new NumberField({ required: true, nullable: false, integer: true, min: 4, initial: 5, label: "RA.Attributes"})
+      abilities: new SchemaField({
+        base: new NumberField({ required: true, nullable: false, integer: true, min: 4, initial: 5, label: "RA.Attributes"}),
+        bonus: new NumberField({ nullable: false, integer: true, min: 0})
       }),
       lifePoints: new SchemaField({
         value: new NumberField({ required: true, nullable: false, integer: true, min: 0, initial: 100, label: "RA.LifePoints" }),
