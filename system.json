@@ -4,7 +4,7 @@
   "description": "Una version alternativa del sistema Anima Beyond Fantasy con el objetivo de implementar multiples comodidades adicionales",
   "version": "0.1.0",
   "compatibility": {
-    "minimum": "13",
+    "minimum": "12",
     "verified": "13"
   },
   "url": "https://github.com/gitkinu/reanima",
@@ -13,10 +13,10 @@
   "authors": [
     {
       "name": "Kinu",
-      "url": ""
+      "discord": "kinu_"
     }
   ],
-  "esmodules": ["module/reanima.js"],
+  "esmodules": ["reanima.mjs"],
   "styles": ["styles/reanima.css"],
   "languages": [
     {
