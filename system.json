@@ -4,7 +4,7 @@
   "description": "Una version alternativa del sistema Anima Beyond Fantasy con el objetivo de implementar multiples comodidades adicionales",
   "version": "0.1.0",
   "compatibility": {
-    "minimum": "12",
+    "minimum": "13",
     "verified": "13"
   },
   "url": "https://github.com/gitkinu/reanima",
@@ -18,13 +18,6 @@
   ],
   "esmodules": ["reanima.mjs"],
   "styles": ["styles/reanima.css"],
-  "languages": [
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json"
-    }
-  ],
   "documentTypes": {
   "Actor": {
     "character": {
@@ -57,13 +50,13 @@
       "htmlFields": ["description"]
     },
     "ki": {
-
+      "htmlFields": ["description"]
     },
     "nemesis": {
-
+      "htmlFields": ["description"]
     },
     "styletables": {
-
+      "htmlFields": ["description"]
     }
   },
   "JournalEntryPage": {
@@ -72,45 +65,11 @@
     }
   }
   },
-  "packs": [
-    {
-      "name": "advantages",
-      "label": "Advantages",
-      "path": "packs/advantages",
-      "type": "Item"
-    },
-    {
-      "name": "disadvantages",
-      "label": "Disadvantages",
-      "path": "packs/disadvantages",
-      "type": "Item"
-    },
-    {
-      "name": "equipment",
-      "label": "Equipment",
-      "path": "packs/equipment",
-      "type": "Item"
-    },
-    {
-      "name": "spell",
-      "label": "Spells",
-      "path": "packs/spell",
-      "type": "Item"
-    },
-    {
-      "name": "psychic",
-      "label": "Psychics",
-      "path": "packs/psychic",
-      "type": "Item"
-    }
-  ],
   "grid": {
     "type": 1,
     "distance": 1,
     "units": "m",
     "diagonals": 1
   },
-  "background": "systems/reanima/ui/background.webp",
-  "socket": true,
-  "primaryTokenAttribute": "characteristics.lifePoints"
+  "background": "systems/reanima/ui/background.webp"
 }
